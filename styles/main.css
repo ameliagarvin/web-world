@@ -10,12 +10,14 @@ html {
 /* Fixed Navigation Bar */
 
 header {
-  height: 120px;
-  background-color: #fff;
-  border-bottom: 4px solid yellow;
+  height: 5.5em;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 5px solid yellow;
   width: 100%;
   position: fixed;
+  top: 0;
   margin: 0;
+  z-index: 5;
 }
 
 nav ul {
@@ -36,6 +38,7 @@ nav li a {
   padding: 0 2em;
   font-family: courier;
   letter-spacing: 2px;
+  background-color: white;
 }
 
 nav a:hover,
@@ -43,7 +46,7 @@ nav a:focus,
 nav a:active {
   background-color: yellow;
   text-decoration: underline;
-  text-decoration-color: #000000;
+  text-decoration-color: lime;
 }
 
 .nav-link { 
@@ -70,4 +73,54 @@ nav a:active {
   border-radius: 10px 20px 5px 1px;
 }
 
-/* Landing Page Styles */
+/* History Page Styles */
+
+h1 {
+	background-color: #000;
+	color: #FFF;
+	padding-left: 5px;
+}
+.wrapper {
+  position: relative;
+  top: 8em;
+	background-color: white;
+	width: 600px;
+	min-height: 260px;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Arial, Helvetica, sans-serif;	
+	background-color: hsla(170, 50%, 45%, .4);
+}
+
+.code_snippet {
+	background-color: #EFECEC;
+	padding: 5px;
+	border: 1px solid #D9A8D9;
+	display: inline-block;
+	margin: 3px;
+	font-family: Consolas, monaco, monospace;
+	color: #000099;	
+}
+
+
+.frame {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border: 2px dashed yellow;
+  background-image: linear-gradient(hsla(0, 50%, 45%, .2), hsla(50, 50%, 45%, .5));
+  transition: all 2s;
+}
+
+.frame:hover {
+  background-color: hsla(50, 50%, 45%, .5);
+  background-image; 
+}
+
+.frame-of-frames {
+    padding: 50px;
+  display: flex;
+  margin-top: 4em;
+  border-top: 6px solid green;
+}
