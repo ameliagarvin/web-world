@@ -12,11 +12,12 @@ html {
 header {
   height: 5.5em;
   background-color: rgba(255, 255, 255, 0.9);
-  border-bottom: 5px solid yellow;
+  border-bottom: .15em solid yellow;
   width: 100%;
   position: fixed;
   top: 0;
   margin: 0;
+  height: 52px;
   z-index: 5;
 }
 
@@ -36,9 +37,10 @@ nav li a {
   text-decoration: none;
   color: black;
   padding: 0 2em;
-  font-family: courier;
+  font-family: monospace;
   letter-spacing: 2px;
   background-color: white;
+  height: 2.2em;
 }
 
 nav a:hover,
@@ -47,6 +49,11 @@ nav a:active {
   background-color: yellow;
   text-decoration: underline;
   text-decoration-color: lime;
+  border-bottom: 3px dashed black;
+  border-left: 3px dashed black;
+  border-right: 3px solid yellow;
+  border-top: 2px solid yellow;
+  border-radius: 10px 20px 5px 1px;
 }
 
 .nav-link { 
@@ -60,19 +67,20 @@ nav a:active {
   border-left: 3px dashed black;
   border-right: 3px solid black;
   border-top: 2px solid blue;
-  width: 125px;
-  height: 50px;
   transition: all .5s;
 }
 
-.nav-link:hover {
-  border-bottom: 3px dashed black;
-  border-left: 3px dashed black;
-  border-right: 3px solid yellow;
-  border-top: 2px solid yellow;
-  border-radius: 10px 20px 5px 1px;
+li a.logo {
+  border:none;
+  background-color: transparent;
 }
 
+li a.hover {
+  background-color: transparent;
+}
+.logo img {
+  width: 20%;
+}
 /* History Page Styles */
 
 h1 {
