@@ -6,19 +6,25 @@ html {
 }
 
 /* General Styles */
-
-/* Fixed Navigation Bar */
+body {
+  width: 100%;
+  background-image:  linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url("../images/First_Web_Server.jpg");
+  font-family: 'Roboto Mono', monospace;
+}
+/* main styles */
+main {
+  width: 70vw;
+  margin: 0 auto;
+  background-color: black;
+}
+/* Fixed Navigation Bar styles*/
 
 header {
-  height: 5.5em;
   background-color: rgba(255, 255, 255, 0.9);
   border-bottom: .15em solid yellow;
   width: 100%;
   position: fixed;
-  top: 0;
-  margin: 0;
-  height: 52px;
-  z-index: 5;
+  margin-top:-1em;
 }
 
 nav ul {
@@ -37,7 +43,6 @@ nav li a {
   text-decoration: none;
   color: black;
   padding: 0 2em;
-  font-family: monospace;
   letter-spacing: 2px;
   background-color: white;
   height: 2.2em;
@@ -81,6 +86,76 @@ li a.hover {
 .logo img {
   width: 20%;
 }
+
+/* banner section */
+.banner {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 6px 7px rgba(150, 150, 150, .8);
+  font-size: 2rem;
+}
+
+.quote span {
+  display: block;
+  text-shadow: none;
+}
+/* learn more section */
+.learn-more {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 3em;
+}
+
+.learn-more i {
+  font-size: 3rem;
+}
+
+.learn-more article {
+  width: 18em;
+  height: 18em;
+  border: 1px solid;
+  border-bottom: 3px dashed grey;
+  border-left: 3px dashed black;
+  border-right: 3px solid black;
+  border-top: 2px solid blue;
+  background-color: white;
+  color: purple;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em 2em 2em;
+  text-align: center;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 5px 9px 0px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow:    0px 5px 9px 0px rgba(50, 50, 50, 0.41);
+  box-shadow:         0px 5px 9px 0px rgba(50, 50, 50, 0.41);
+}
+
+.learn-more article:hover {
+  background-color: yellow;
+}
+
+.learn-more h2 {
+  border-bottom: 1px solid yellow;
+  padding-bottom: 1em;
+  color: black;
+}
+
+
+/* footer */
+
+footer {
+  border-top: .1em solid blue;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
 /* History Page Styles */
 
 h1 {
@@ -123,7 +198,7 @@ h1 {
 
 .frame:hover {
   background-color: hsla(50, 50%, 45%, .5);
-  background-image; 
+
 }
 
 .frame-of-frames {
