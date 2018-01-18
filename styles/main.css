@@ -7,6 +7,7 @@ html {
 
 /* General Styles */
 body {
+  margin: auto;
   width: 100%;
   background-image:  linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url("../images/First_Web_Server.jpg");
   font-family: 'Roboto Mono', monospace;
@@ -15,7 +16,7 @@ body {
 main {
   width: 70vw;
   margin: 0 auto;
-  background-color: black;
+  border-left: 1em solid blue;
 }
 /* Fixed Navigation Bar styles*/
 
@@ -51,14 +52,11 @@ nav li a {
 nav a:hover,
 nav a:focus,
 nav a:active {
-  background-color: yellow;
+  background-color: black;
+  color: white;
   text-decoration: underline;
-  text-decoration-color: lime;
-  border-bottom: 3px dashed black;
-  border-left: 3px dashed black;
-  border-right: 3px solid yellow;
-  border-top: 2px solid yellow;
-  border-radius: 10px 20px 5px 1px;
+  text-decoration-color: white;
+  border-radius: 0 20px 5px 1px;
 }
 
 .nav-link { 
@@ -89,60 +87,66 @@ li a.hover {
 
 /* banner section */
 .banner {
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin: 0 auto;
   padding: 1em;
   color: rgb(255, 255, 255);
-  text-shadow: 0px 6px 7px rgba(150, 150, 150, .8);
+  text-shadow: 2px 4px 5px rgba(150, 150, 150, .8);
   font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
+.quote {
+  width: 50%;
+}
+.quote p {
+    margin-top: 2em;
+}
 .quote span {
   display: block;
   text-shadow: none;
 }
+
 /* learn more section */
+
 .learn-more {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-top: 3em;
-}
-
-.learn-more i {
-  font-size: 3rem;
-}
-
-.learn-more article {
-  width: 18em;
-  height: 18em;
-  border: 1px solid;
-  border-bottom: 3px dashed grey;
-  border-left: 3px dashed black;
-  border-right: 3px solid black;
-  border-top: 2px solid blue;
-  background-color: white;
-  color: purple;
+  background-color: navy;
   display: flex;
   flex-direction: column;
-  margin: 0 2em 2em 2em;
-  text-align: center;
-  justify-content: space-between;
-  -webkit-box-shadow: 0px 5px 9px 0px rgba(50, 50, 50, 0.41);
-  -moz-box-shadow:    0px 5px 9px 0px rgba(50, 50, 50, 0.41);
-  box-shadow:         0px 5px 9px 0px rgba(50, 50, 50, 0.41);
 }
-
-.learn-more article:hover {
-  background-color: yellow;
-}
-
-.learn-more h2 {
-  border-bottom: 1px solid yellow;
-  padding-bottom: 1em;
+.learn-more a {
   color: black;
+  text-decoration: none;
 }
 
+.learn-more a:hover,
+.learn-more a:focus,
+.learn-more a:active {
+  text-decoration: underline;
+}
+.start {
+  width: 33%;
+  background-color: white;
+  padding: 1em;
+  flex-direction: row;
+}
+
+.people {
+  width: 33%;
+  justify-content: space-between;
+  margin-left: 33%;
+  background-color: silver;
+  padding: 1em;
+}
+
+.explore {
+  width: 33%;
+  margin-left: 66%;
+  background-color: grey;
+  padding: 1em;
+  border-right: 10px solid yellow;
+}
 
 /* footer */
 
