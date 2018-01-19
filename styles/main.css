@@ -10,7 +10,8 @@ body {
   margin: auto;
   width: 100%;
   background-image:  linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url("../images/First_Web_Server.jpg");
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Lato', 'Arial', 'Sans serif';
+  position: relative;
 }
 /* main styles */
 main {
@@ -20,14 +21,17 @@ main {
 }
 /* Fixed Navigation Bar styles*/
 
-header {
-  background-color: black;
-  border-bottom: .15em solid lime;
-  width: 100%;
+nav {
+  display: flex;
+  justify-content: space-around;
   position: fixed;
-  margin-top:-1em;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  width: 100vw;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  z-index: 100;
 }
-
 nav ul {
   display: flex;
   align-items: center;
@@ -44,12 +48,13 @@ nav li a {
   text-decoration: none;
   color: grey;
   letter-spacing: 2px;
+  font-size: 1rem;
 }
 
 nav a:hover,
 nav a:focus,
 nav a:active {
-  background-color: black;
+  background-color: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   color: white;
   text-decoration: underline;
   text-decoration-color: white;
@@ -84,22 +89,22 @@ li a.hover {
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  padding: 1em;
-  color: rgb(255, 255, 255);
-  text-shadow: 2px 4px 5px rgba(150, 150, 150, .8);
-  font-size: 1rem;
-  line-height: 2rem;
+  padding: 4em 2em;
+  color: rgba(150, 150, 150, .8);
+  font-size: 1.5rem;
+  line-height: 2.25rem;
   background-color: rgba(0, 0, 0, 0.8);
 }
 .quote {
   width: 50%;
 }
 .quote p {
-    margin-top: 4em;
+    margin-top: 2em;
 }
 .quote span {
   display: block;
-  text-shadow: none;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 1em;
 }
 
 .web-world {
@@ -115,6 +120,9 @@ li a.hover {
   border-top: 4em solid rgba(0,138,0,0.1);
 }
 
+.learn-more h2 {
+  color: white;
+}
 .learn-more a {
   color: black;
   text-decoration: none;
@@ -132,11 +140,19 @@ li a.hover {
 }
 .start {
   width: 50%;
-  background-color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
   padding: 1em;
   flex-direction: row;
 }
-
+.start .info {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.info {
+  line-height: 2em;
+}
 .people {
   width: 25%;
   justify-content: space-between;
@@ -153,56 +169,3 @@ li a.hover {
 
 
 
-
-
-/* History Page Styles */
-
-h1 {
-	background-color: #000;
-	color: #FFF;
-	padding-left: 5px;
-}
-.wrapper {
-  position: relative;
-  top: 8em;
-	background-color: white;
-	width: 600px;
-	min-height: 260px;
-	padding: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: Arial, Helvetica, sans-serif;	
-	background-color: hsla(170, 50%, 45%, .4);
-}
-
-.code_snippet {
-	background-color: #EFECEC;
-	padding: 5px;
-	border: 1px solid #D9A8D9;
-	display: inline-block;
-	margin: 3px;
-	font-family: Consolas, monaco, monospace;
-	color: #000099;	
-}
-
-
-.frame {
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
-  border: 2px dashed yellow;
-  background-image: linear-gradient(hsla(0, 50%, 45%, .2), hsla(50, 50%, 45%, .5));
-  transition: all 2s;
-}
-
-.frame:hover {
-  background-color: hsla(50, 50%, 45%, .5);
-
-}
-
-.frame-of-frames {
-    padding: 50px;
-  display: flex;
-  margin-top: 4em;
-  border-top: 6px solid green;
-}
