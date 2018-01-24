@@ -71,18 +71,54 @@ nav a:active {
   transition: all .15s;
 }
 
-li a.logo {
-  border:none;
-  background-color: transparent;
+
+/* logo */
+#loader {
+  border: 1px solid white;
+  width: 100px;
+  height: 1em;
+  overflow: hidden;
+  background-color: black;
 }
 
-li a.hover {
-  background-color: transparent;
-}
-.logo img {
-  width: 50%;
+#loader > div {
+  background: black;
+  width: 5px;
+  height: 1em;
+  transform-origin: top center;
+  animation: load 5.5s infinite linear;
 }
 
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+    margin-left: 25px;
+    margin-top: 0;
+    transform-origin: top center;
+  }
+  50% {
+    margin-left: 50px;
+    margin-top: 0;
+    transform-origin: top center;
+    transform: rotate(0deg);
+    background-color: lime;
+  }
+  75% {
+    margin-left: 75px;
+    margin-top: 0;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
 /* banner section */
 .banner {
   display: flex;
@@ -215,7 +251,6 @@ td, th {
 }
 
 .tech {
-  width: 60%;
   font-family: monospace;
   width: 60%;
   padding: 0 2em;
@@ -357,50 +392,35 @@ input[type=radio]:checked + label::after {
   100% { opacity: 0}
 }
 
-#loader {
-  border: 1px solid white;
-  width: 100px;
-  height: 50px;
-  margin: 40px auto;
-  overflow: hidden;
-  background-color: black;
+/* Travel Guide Page Styles */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Supplies section Styles */
+
+.supplies {
+  width: 50%;
+}
+/* Browser section Styles */
+.browser {
+  width: 50%;
+}
+.browser-examples {
+  display: flex;
+  font-size: 2em;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+/* Style section Styles */
+.travel-style {
+  width: 100%;
+}
+.style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-#loader > div {
-  background: black;
-  width: 10px;
-  height: 100px;
-  transform-origin: top center;
-  animation: load 5.5s infinite linear;
-}
-
-@keyframes load {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-90deg);
-    margin-left: -5px;
-    margin-top: 0;
-    transform-origin: top center;
-  }
-  50% {
-    margin-left: -5px;
-    margin-top: 95px;
-    transform-origin: top center;
-    transform: rotate(-90deg);
-    background-color: lime;
-  }
-  75% {
-    margin-left: 95px;
-    margin-top: 0;
-    transform-origin: bottom center;
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-    transform-origin: bottom center;
-    margin-left: 0;
-    margin-top: 0;
-  }
-}
