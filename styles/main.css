@@ -170,3 +170,237 @@ li a.hover {
 
 
 /* History page */
+
+
+table { 
+	width: 70vw; 
+	border-collapse: collapse; 
+  font-family: 'Lato', 'Arial', 'Sans serif';
+	}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background-color: #fff; 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+  font-weight: bold;
+	}
+
+td, th { 
+	padding: 10px;  
+	text-align: center; 
+  font-size: 18px;
+
+  }
+  
+.time {
+  width: 10%;
+}
+
+.key-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-right: 2px solid yellow;
+  border-left: 2px solid yellow;
+}
+.key-figure img {
+  width: 50%;
+  border-radius: 50%;
+  background-color: rgba(2, 251, 0, 0.5);
+}
+
+.tech {
+  width: 60%;
+  font-family: monospace;
+  width: 60%;
+  padding: 0 2em;
+  text-align: left;
+  line-height: 2em;
+}
+
+body {
+  color: #2c3e50;
+  background: #ecf0f1;
+}
+h1 {
+  text-align: center;
+}
+.half {
+  float: left;
+  width: 100%;
+  padding: 0 1em;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #16a085;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: #2980b9;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #1abc9c;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: #3498db;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 100%;
+}
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
+
+.slider {
+  max-width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  position: relative;
+}
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide1 {
+  background: url(http://media.dunkedcdn.com/assets/prod/40946/580x0-9_cropped_1371566801_p17tbs0rrjqdt1u4dnk94fe4b63.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+
+} 
+.slide2 {
+  background: url(http://media.dunkedcdn.com/assets/prod/40946/580x0-9_cropped_1371565525_p17tbqpu0d69c21hetd77dh483.jpeg)no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    background: url(http://media.dunkedcdn.com/assets/prod/40946/580x0-9_cropped_1371564896_p17tbq6n86jdo3ishhta3fv1i3.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+
+#loader {
+  border: 1px solid white;
+  width: 100px;
+  height: 50px;
+  margin: 40px auto;
+  overflow: hidden;
+  background-color: black;
+}
+
+#loader > div {
+  background: black;
+  width: 10px;
+  height: 100px;
+  transform-origin: top center;
+  animation: load 5.5s infinite linear;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+    margin-left: -5px;
+    margin-top: 0;
+    transform-origin: top center;
+  }
+  50% {
+    margin-left: -5px;
+    margin-top: 95px;
+    transform-origin: top center;
+    transform: rotate(-90deg);
+    background-color: lime;
+  }
+  75% {
+    margin-left: 95px;
+    margin-top: 0;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
