@@ -9,9 +9,10 @@ html {
 body {
   margin: auto;
   width: 100%;
-  background-image:  linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url("../images/First_Web_Server.jpg");
+  /* background-image:  linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url("../images/First_Web_Server.jpg"); */
   font-family: 'Lato', 'Arial', 'Sans serif';
   position: relative;
+  background: linear-gradient(135deg, #1e5799 0%,#cf60db 60%);
 }
 /* main styles */
 main {
@@ -126,10 +127,10 @@ nav a:active {
   width: 100%;
   margin: 0 auto;
   padding: 4em 2em;
-  color: rgba(150, 150, 150, .8);
+  color: white;
   font-size: 1.5rem;
   line-height: 2.25rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: lightblue;
 }
 .quote {
   width: 50%;
@@ -283,7 +284,7 @@ td, th {
 /* Accordion styles */
 .tab {
   position: relative;
-  margin-bottom: 1px;
+  border-bottom: 1px solid white;
   width: 100%;
   overflow: hidden;
 }
@@ -296,7 +297,8 @@ label {
   position: relative;
   display: block;
   padding: 0 0 0 1em;
-  background: #16a085;
+  background: orange;
+  color: white;
   font-weight: bold;
   line-height: 3;
   cursor: pointer;
@@ -305,9 +307,10 @@ label {
   background: #2980b9;
 }
 .tab-content {
+  color: white;
   max-height: 0;
   overflow: hidden;
-  background: #bdc3c7;
+  background: darkblue;
   -webkit-transition: max-height .35s;
   -o-transition: max-height .35s;
   transition: max-height .35s;
@@ -447,7 +450,7 @@ input[type=radio]:checked + label::after {
   justify-content: space-around;
 }
 
-ul.style {
+ol.style {
   display: flex;
   background-color: white;
   justify-content: space-between;
@@ -461,6 +464,14 @@ ul.style {
   background-color: orange;
 }
 
+.tips {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+}
+.orange-banner {
+  position: relative;
+}
 ul.style img {
   width: 10em;
 }
