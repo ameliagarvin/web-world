@@ -406,7 +406,6 @@ input[type=radio]:checked + label::after {
 .container {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .container > * {
@@ -425,4 +424,43 @@ input[type=radio]:checked + label::after {
 /* Browser section Styles */
 .browser {
   flex: 0 0 60%;
+}
+
+.browser-examples {
+  display: flex;
+  font-size: 2em;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.travel-style {
+  flex: 0 0 100%;
+  background-color: #bdc3c7;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1em solid grey;
+}
+
+.device div {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul.style {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 10em;
+  list-style: none;
+}
+
+.future-you img {
+  background-color: orange;
+}
+
+ul.style img {
+  width: 10em;
 }
