@@ -24,7 +24,7 @@
 <!-- banner section -->
 <section class="banner">
     <div class="brief-history">
-      <h1>Meet the people</h1>
+      <h1>Meet the people<span class="period">.</span></h1>
        <p>Discover the characters that give Web world it's distinct personality.
        </p>
     </div> <!-- brief-history -->
@@ -41,14 +41,16 @@
 <div class="html">
   <div class="html-example">
     <p>HTML, otherwise known as Hypertext Markup Language, is the structure of every region in Web-World. All the pieces, or content, of web world can be found in HTML. It is not much to look at it but it is robust, to the point and really has everything you will need to make up a region of web-world.</p>
-    <p>press shift + Ctrl + i || press shift + Command + i</p>
+    <h3>See for yourself!</h3>
+    <p>Press shift + Ctrl + i ( For PC users ) || press shift + Command + i ( For Mac users )</p>
+    <p>Alternatively right click + select "Inspect"</p>
+    <p>What do you think?...It is pretty but without it there would be no web-world!</p>
   </div> <!-- .html-example -->
   <div class="character-table">
 <table class="html-character-table">
-  <h3>*Not all characters are represented in the table below.</h3>
   <thead>
     <tr>
-      <th>Common Characters</th>
+      <th>Characters</th>
       <th>Name</th>
       <th>Traits</th>
       <th>Location</th>
@@ -62,7 +64,7 @@
       <td data-column="location">As needed to explain regions to makers and travelers of web-world.</td>
     </tr>
     <tr>
-      <td data-column="common characters"></td>
+      <td data-column="common characters"><i class="fa fa-code" aria-hidden="true"></i></td>
       <td data-column="Name">Angle Brackets</td>
       <td data-column="traits">Goes around all the regions of web-world.</td>
       <td data-column="location">Around everything!</td>
@@ -95,18 +97,26 @@
       <input id="tab-two" type="checkbox" name="tabs">
       <label for="tab-two">CSS</label>
       <div class="tab-content">
-          <div class="html">
-              <div class="html-example">
-                <p>HTML, otherwise known as Hypertext Markup Language, is the structure of every region in Web-World. All the pieces, or content, of web world can be found in HTML. It is not much to look at it but it is robust, to the point and really has everything you will need to make up a region of web-world.</p>
-                <h2>Look at this wonderful styles and colors</h2>
-               <p>CSS! YAY!</p>
-              </div> <!-- .html-example -->
+          <div class="css">
+              <div class="css-example">
+                <p>CSS, otherwise known as Cascading Style Sheets are what enables web-world to be so multifacted, multicolored and stylistically unique. All the regions, or content, of web world are given there aesthetic voice through CSS. The region of CSS is a place where colors, fonts, layouts (all the shiny things) live. At times CSS can be finicky and difficult to wrangle but once you start understanding it's particular language it becomes a lot smoother to navigate.</p>
+                <h2>See it for yourself!</h2>
+                <ol>
+                  <li> Press shift + Ctrl + i ( For PC users ) || press shift + Command + i ( For Mac users )</li>
+                  <li> Alternatively right click + select "Inspect"</li>
+                  <li> Inside the "Elements" tab find "head" tag and make sure it is open by clicking the down caret <i class="fa fa-caret-down" aria-hidden="true"></i></li>
+                  <li> Inside the head tage navigate to the linked stylesheet</li>
+                  <li> right Click + select "Hide Element"</li>
+                  <li> All the styles should disappear!</li>
+                  <li> Don't be afraid!</li>
+                  <li> Refresh the page to restore all the styles</li>
+                </ol>
+              </div> <!-- .css-example -->
               <div class="character-table">
-            <table class="html-character-table">
-              <h3>*Not all characters are represented in the table below.</h3>
+            <table class="css-character-table">
               <thead>
                 <tr>
-                  <th>Common Characters</th>
+                  <th>Characters</th>
                   <th>Name</th>
                   <th>Traits</th>
                   <th>Location</th>
@@ -114,50 +124,55 @@
               </thead>
               <tbody>
                 <tr>
-                  <td data-column="common characters">Comments</td>
+                  <td data-column="common characters">/* */</td>
                   <td data-column="Name">Comments</td>
-                  <td data-column="traits">Keeps everyone informed.</td>
-                  <td data-column="location">As needed to explain regions to makers and travelers of web-world.</td>
+                  <td data-column="traits">Very talkative and keeps everyone informed.</td>
+                  <td data-column="location">Found between style changes in web-world regions.</td>
                 </tr>
                 <tr>
-                  <td data-column="common characters"></td>
-                  <td data-column="Name">Angle Brackets</td>
-                  <td data-column="traits">Goes around all the regions of web-world.</td>
-                  <td data-column="location">Around everything!</td>
+                  <td data-column="common characters">{ }</td>
+                  <td data-column="Name">Curly Braces</td>
+                  <td data-column="traits">Encapsulating and warm, Curly Braces wrap style properties given to web-world regions.</td>
+                  <td data-column="location">Found around all styles.</td>
                 </tr>
                 <tr>
-                  <td data-column="common characters">!</td>
-                  <td data-column="Name">Exclamation point</td>
-                  <td data-column="traits">Excitable and always the first to show up.</td>
-                  <td data-column="location">Found at the top of every web-page in the doctype.</td>
+                  <td data-column="common characters">;</td>
+                  <td data-column="Name">Semi-colon</td>
+                  <td data-column="traits">Definitive and to the point the Semi-colon defines one style property over another.</td>
+                  <td data-column="location">Found at the end of each style property.</td>
                 </tr>
                 <tr>
-                  <td data-column="common characters">/</td>
+                  <td data-column="common characters">:</td>
                   <td data-column="Name">Forward Slash</td>
-                  <td data-column="traits">Makes sure everything is properly contained...if absent chaos ensues.</td>
-                  <td data-column="location">Found at the end of the line always making sure everything is moving forward.</td>
+                  <td data-column="traits">The Colon, not to be confused with the semi-color, is an inherent Mediator as it decides the degree to which a style will be applied depending on context.</td>
+                  <td data-column="location">Found between Style properties and their assigned value.</td>
                 </tr>
                 <tr>
-                  <td data-column="common characters">a</td>
-                  <td data-column="Name">links</td>
-                  <td data-column="traits">A very social character keeping everyone in web-world connected.</td>
-                  <td data-column="location">links are constructed and thus found anywhere two points that might not otherwise to connected, just like a bridge.</td>
+                  <td data-column="common characters">.</td>
+                  <td data-column="Name">Period</td>
+                  <td data-column="traits">Unassuming, easily missed but easily to bridge HTML to style properties</td>
+                  <td data-column="location">Found at the beginning of any style decision to connect HTML regions to their aesthetic suit.</td>
                 </tr>
               </tbody>
             </table>
                     </div> <!-- .character-table -->
-                   </div> <!-- .html -->
+                   </div> <!-- .css -->
       </div> <!-- .tab-content -->
     </div> <!-- .tab -->
     <div class="tab">
       <input id="tab-three" type="checkbox" name="tabs">
       <label for="tab-three">HTML + CSS</label>
       <div class="tab-content">
-        <div class='slider'>
-          <div class='slide1'></div>
-          <div class='slide2'></div>
-          <div class='slide3'></div>
-        </div> <!-- .slider -->
+        <div>
+            <div class='slider'>
+                <div class='slide1'></div>
+                <div class='slide2'></div>
+                <div class='slide3'></div>
+              </div> <!-- .slider -->
+        </div>
+        <div class="website-examples-text">
+            <p>When web world was first created HTML was alone. Web World did not have much of a personality. It was hard to look at but it worked. The issue of establishing a global personality was addressed by the creation of CSS a few years later. As CSS was created specifically for HTMl it goes without saying (Although I feel obliged to say it) that they work peacefully together to create what Web-World has become today!</p>
+          </div>
       </div> <!-- .tab-content -->
     </div> <!-- .tab -->
   </div> <!-- .half -->

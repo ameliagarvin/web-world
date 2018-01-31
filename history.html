@@ -27,55 +27,66 @@
 <!-- banner section -->
 <section class="banner">
     <div class="brief-history">
-      <h1>A brief-history</h1>
+      <h1>A brief-history<span class="period">.</span></h1>
        <p>Discover the story behind web-world in a brief timeline from the key-figures to the technologies that shaped the foundations of this world.</p>
     </div> <!-- brief-history -->
 </section>
 
 <!-- main section -->
 <main>
-<!-- table section -->
- <table>
-      <thead>
-        <tr>
-          <th>Timeline</th>
-          <th>Key Figure</th>
-          <th>Technological Advancements</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-column="time" class="time">1966</td> <!-- .time -->
-          <td data-column="key-figure" class="key-figure"> 
-          <img src="./images/Murray_Leinster-01.svg" alt="portrait of Murray Leinster">
-            <h2>Murray Leinster</h2>
-            <p>Author of Science-Fiction</p>
-          </td> <!-- .key-figure -->
-          <td data-column="tech" class="tech">Author of the short story titled "A logic Named Joe". While computing was still in it's infancy the story introduced the idea of a world connected by a personal computer network as well as its potential drawbacks.
-          </td> <!-- .tech -->
-        </tr>
-        <tr>
-          <td data-column="time" class="time">1991</td> <!-- .time -->
-          <td data-column="key-figure" class="key-figure">          
-            <img src="./images/tim-berners-lee-02.svg" alt="portrait of Tim Berners-Lee">
+
+<!-- timeline -->
+
+<section class="history-container">
+  <article class="info-history">
+      <div class="time">
+          <div>1966</div>
+      </div> <!-- .time -->
+    <div class="portrait">
+        <img src="./images/Murray_Leinster-01.svg" alt="portrait of Murray Leinster">
+      <div class="portrait-info">
+          <h2>Murray Leinster</h2>
+          <p>Author of Science-Fiction</p>
+          <a href="https://en.wikipedia.org/wiki/Murray_Leinster"  target="_blank">learn more</a>
+      </div> <!-- .portrait-info -->
+    </div> <!-- .murray-leinster-portrait -->
+    <div class="tech">
+        <p>Author of the short story titled <span>"A logic Named Joe"</span>. While computing was still in it's infancy the story introduced the idea of <span>a world connected by a personal computer network</span> as well as its potential drawbacks.</p>
+    </div> <!-- .logics -->
+  </article> <!-- .murray-leinster-info -->
+  <article class="info-history">
+      <div class="time">
+          <div>1991</div>
+      </div> <!-- .time -->
+    <div class="portrait">
+        <img src="./images/tim-berners-lee-02.svg" alt="portrait of Tim Berners-Lee">
+        <div class="portrait-info">
             <h2>Tim Berners-Lee</h2>
             <p>Creator of the modern World</p>
-          </td> <!-- .key-figure -->
-          <td data-column="tech" class="tech">On June 8th, 1991 the World Wide Web was announced to the world. On August 8th of the same year the world's 1st Web Page was launched at the European Organization for Nuclear Research (CERN) in Switzerland. The web page which would become the foundation of what is now web world was hosted on NeXTcube, the world's first web server.</td> <!-- .tech -->
-        </tr>
-        <tr>
-          <td data-column="time" class="time">1996</td> <!-- .time -->
-          <td data-column="key-figure" class="key-figure">
-              <img src="./images/hakon-03.svg" alt="portrait of Hakon Wium Lie">
-              <h2>Håkon Wium Lie</h2>
-              <p>Style Wizard</p>
-          </td> <!-- .key-figure -->
-          <td data-column="tech" class="tech">
-            He is best known for proposing the concept of Cascading Style Sheets (CSS) while working with Tim Berners-Lee and Robert Cailliau at CERN in 1994. He is the reason behind the colours, fonts and style of all web webpages.
-          </td> <!-- .tech -->
-        </tr>
-      </tbody>
-    </table>
-  </main>
+            <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee"  target="_blank">learn more</a>
+        </div> <!-- .portrait-info -->
+    </div> <!-- .tim-berners-lee-portrait -->
+    <div class="tech">
+      <p>On June 8th, 1991 the <span>World Wide Web</span> was announced to the world. On August 8th of the same year the <span>world's 1st Web Page</span> was launched at the European Organization for Nuclear Research (CERN) in Switzerland. The web page which would become the foundation of what is now web world was hosted on NeXTcube, the <span>world's first web server</span>.</p>
+    </div> <!-- .world-wide-web -->
+   </article> <!-- .tim-berners-lee-info -->
+   <article class="info-history">
+      <div class="time">
+          <div>1996</div>
+      </div> <!-- .time -->
+    <div class="portrait">
+        <img src="./images/hakon-03.svg" alt="portrait of Hakon Wium Lie">
+        <div class="portrait-info">
+            <h2>Håkon Wium Lie</h2>
+            <p>Style Wizard</p>
+            <a href="https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie"  target="_blank">learn more</a>
+        </div> <!-- .portrait-info -->
+    </div> <!-- .hakon-wium-lie-portrait -->
+    <div class="tech">
+        <p>He is best known for proposing the concept of <span>Cascading Style Sheets (CSS)</span> while working with Tim Berners-Lee and Robert Cailliau at CERN in 1994. He is the reason behind the <span>colours, fonts and style</span> of all web webpages.</p>
+    </div> <!-- .css-history-->
+  </article> <!-- .tim-berners-lee-info -->
+</section> <!-- .history-container -->
+</main>
 </body>
 </html>
