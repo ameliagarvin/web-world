@@ -6,32 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web-world</title>
   <link href="styles/main.css" rel="stylesheet">
-  <script src="https://use.fontawesome.com/b4f7524d9e.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <!-- body -->
 <body>
 <!-- header -->
 <header>
-<!-- navigation menu -->
-  <nav>
+  <nav class="menu">
     <ul>
-      <li><a href="index.html"><div id="loader"><div></div></div></a></li>
+      <li><a href="index.html">About</a></li>
       <li><a href="history.html" class="nav-link">History</a></li>
       <li><a href="culture.html" class="nav-link">Culture</a></li>
-      <li><a href="travel-guide.html" class="nav-link">Travel Guide</a></li>
-    </ul>
-  </nav>
+      <li><a  href="travel-guide.html" class="nav-link">Travel Guide</a>
+      </li>
+    </ul> <!--.active -->
+    <a class="toggle-nav" href="#"><i class="fas fa-bars"></i></a>
+  </nav> <!--.menu -->
 </header>
 
 <!-- banner section -->
-
-  <section class="banner">
-    <div class="brief-history">
-       <h2><span class="period">"</span>Anyone who has lost track of time when using a computer knows the propensity to dream, the urge to make dreams come true and the tendency to miss lunch.<span class="period">"</span> Tim-Berners-lee
-       </h2>
-    </div>
-  </section>
+<section class="banner">
+</section>
   
   <!-- main content -->
  <main>
@@ -69,5 +65,8 @@
     </article>
   </section> <!-- .learn-more -->
  </main>
+ <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+ <script src="./scripts/imageslide.js"></script>
 </body>
 </html>

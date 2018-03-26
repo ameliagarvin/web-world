@@ -4,26 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://use.fontawesome.com/b4f7524d9e.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <title>Web-world</title>
   <link href="styles/main.css" rel="stylesheet">
 </head>
-<body>
-  
+<body>  
 <header>
-<!-- navigation menu -->
-  <nav>
-    <ul>
-      <li><a href="index.html"><div id="loader">
-          <div></div>
-        </div></a></li>
-      <li><a href="history.html" class="nav-link">History</a></li>
-      <li><a href="culture.html" class="nav-link">Culture</a></li>
-      <li><a href="travel-guide.html" class="nav-link">Travel Guide</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="history.html" class="nav-link">History</a></li>
+        <li><a href="culture.html" class="nav-link">Culture</a></li>
+        <li><a  href="travel-guide.html" class="nav-link">Travel Guide</a>
+        </li>
+      </ul> <!--.active -->
+      <a class="toggle-nav" href="#"><i class="fas fa-bars"></i></a>
+    </nav> <!--.menu -->
+  </header>
 <!-- banner section -->
 <section class="banner">
     <div class="brief-history">
@@ -90,20 +88,26 @@
 
 
 <!-- Timeline redo -->
-
-
 <section class="cd-timeline js-cd-timeline">
 <div class="cd-timeline__container">
 <div class="cd-timeline__block js-cd-block">
 <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
-<span class="">1966</span>
+    <img src="./images/Murray_Leinster-01.svg" alt="portrait of Murray Leinster">
 </div> 
 <div class="cd-timeline__content js-cd-content">
-<h2>Title of section 1</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-<a href="#0" class="cd-timeline__read-more">Read more</a>
-<span class="cd-timeline__date">1991</span>
+<div class="portrait">
+  <div class="portrait-info">
+      <h2>Murray Leinster</h2>
+      <p>Author of Science-Fiction</p>
+     
+  </div> <!-- .portrait-info -->
+</div> <!-- .murray-leinster-portrait -->
+<div class="tech">
+    <p>Author of the short story titled <span>"A logic Named Joe"</span>. While computing was still in it's infancy the story introduced the idea of <span>a world connected by a personal computer network</span> as well as its potential drawbacks.</p>
 </div> 
+<a href="https://en.wikipedia.org/wiki/Murray_Leinster"  target="_blank" class="cd-timeline__read-more">learn more</a>
+</div>
+ 
 </div> 
 <div class="cd-timeline__block js-cd-block">
 <div class="cd-timeline__img cd-timeline__img--movie js-cd-img cd-is-hidden">
@@ -160,10 +164,14 @@
 </div> 
 </div>
 </section>
+
+
 <footer>
 
 </footer>
 </main>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
 <script src="./scripts/imageslide.js"></script>
 </body>
 </html>

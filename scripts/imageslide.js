@@ -105,3 +105,11 @@ window.addEventListener('scroll', debounce(checkSlide));
 		scrolling = false;
 	};
 })();
+
+(function() {
+  $('a.toggle-nav').click(function(e){
+    $(this).toggleClass('active');
+    $('.menu ul').toggleClass('active');
+    e.preventDefault();
+  })
+})();

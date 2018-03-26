@@ -62,201 +62,127 @@ body {
   /* background-image:  linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url("../images/First_Web_Server.jpg"); */
   font-family: 'Lato', 'Arial', 'Sans serif';
   position: relative;
+  background: #feffff;
+  color: #7f8c97;
+  font-size: 1.6rem;
   /* background: linear-gradient(90deg, lightblue 0%,#cf60db 60%); */
 }
 /* main styles */
 main {
-  width: 70vw;
+  width: 90vw;
   margin: 0 auto;
 }
 /* Fixed Navigation Bar styles*/
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  position: fixed;
-  background: white;
-  border-bottom: .5em solid orange;
-  width: 100vw;
-  text-transform: uppercase;
-  line-height: 1.5rem;
+/* Header Styles */
+header {
+	position: fixed;
+	width: 100%;
   z-index: 100;
+  /* background: #e9f0f5; */
+  background: #feffff;
+  /* background: #eaffff; */
 }
-nav ul {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+nav.menu {
+height: 15vh;
 }
 
-nav li {
-  margin: 0 auto;
+.menu ul {
+	display: none;
 }
 
-nav li a {
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 1.25rem;
-}
-
-nav a:hover,
-nav a:focus,
-nav a:active {
-  color: #3498db;
-  text-decoration: underline;
-  text-decoration-color: #000;
-}
-
-.nav-link { 
-  color: #000;
-  border-radius: 0;
-  margin: 1em;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  transition: all .15s;
-}
-
-
-/* logo */
-#loader {
-  border: 1px solid white;
-  width: 100px;
-  height: 1em;
-  overflow: hidden;
-  background-color: black;
-}
-
-#loader > div {
-  background: black;
-  width: 5px;
-  height: 1em;
-  transform-origin: top center;
-  animation: load 5.5s infinite linear;
-}
-
-@keyframes load {
-  0% {
-    transform: rotate(0deg);
+.menu ul.active {
+	display: none;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 15vh;
+	height:min-content;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+	z-index: 100;
+	background: rgba(0,0,0,0.8);
   }
-  25% {
-    transform: rotate(0deg);
-    margin-left: 25px;
-    margin-top: 0;
-    transform-origin: top center;
-  }
-  50% {
-    margin-left: 50px;
-    margin-top: 0;
-    transform-origin: top center;
-    transform: rotate(0deg);
-    background-color: lime;
-  }
-  75% {
-    margin-left: 75px;
-    margin-top: 0;
-    transform-origin: bottom center;
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-    transform-origin: bottom center;
-    margin-left: 0;
-    margin-top: 0;
-  }
-}
-/* banner section */
-.banner {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 10em 2em;
-  color: black;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  border-bottom: .25em solid blue;
+
+.menu li {
+flex: 0 0 calc(100% / 4);
 }
 
-.period {
-  color: #3498db;
-}
-.banner h1 {
-  color: black;
-  font-size: 2em;
-  margin-bottom: .5em;
-}
-.quote {
-  width: 50%;
-}
-.quote p {
-    margin-top: 2em;
-}
-.quote span {
+.menu a {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
   display: block;
-  color: #3498db;
-  margin-top: 1em;
-}
+  color: #6b00fe;
+	line-height: 40px;
+  font-weight: bold;
+ 	letter-spacing: 4px;
+	text-transform: uppercase;
+	transition: all .5s ease-out;
+ }
 
-.web-world {
-  width: 25%;
-  margin-top: 1em;
-}
 
-/* learn more section */
+ .menu a:hover,
+ .menu a:focus,
+ .menu a:active {
+	 color: #FFF;
+	 background-color: #6b00fe;
+	 box-shadow: inset 0 0.25rem 0.125rem 0 rgba(0, 0, 0, 0.5);
+ }
+
+ /* banner image */
+
+ .banner {
+  background: #303e49;
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+ }
+ 
+
+/* home page */
 
 .learn-more {
-  text-align: center;
-  height: 300px;
-  color: #34495e;
+ display: grid;
+ grid-template-columns: repeat(1, 1fr);
+ grid-gap: 2em;
+ margin-top: 2em;
+
 }
 
+.learn-more > * {
+  background: #6b00fe; 
+  border-radius: 2px;
+  padding: 1em;
+  color: #feffff;
+}
+
+.learn-more a {
+  color: #feffff;
+}
 
 .learn-more h2 {
-  font-size: 2.5rem;
-  color: #3498db;
-}
-.learn-more a {
-  color: black;
-  text-decoration: none;
-}
-
-.learn-more p{
-  font-size: 1.5em;
-}
-
-.learn-more i {
   font-size: 2rem;
-  text-align: center;
-  color: #cf60db;
+  letter-spacing: 2px;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
 
-.start .info,
-.people .info,
-.explore .info {
-  border-bottom: .25em solid black;
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
-  flex-direction: column;
-  width: 50%;
-  height: 300px;
+.learn-more p {
+  line-height: 3rem;
+  padding-top: 1em;
 }
 
-.start {
-  flex: 0 0 50%;
+.learn-more svg {
+  transform: scale(2);
+  color: #bac4cb;
+  display: none;
 }
-.people {
-  flex: 0 0 25%;
-}
-
-.explore {
-  flex: 0 0 25%;
-}
-
-
 
 /* History page */
 
@@ -685,11 +611,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  font-size: 1.6rem;
-  color: #7f8c97;
-  background-color: #e9f0f5;
-}
 
 a {
   color: #acb7c0;
@@ -721,30 +642,13 @@ Patterns - reusable parts of our design
 Resource style 
 
 -------------------------------- */
-header {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  background: #303e49;
-}
-
-header h1 {
-  color: white;
-  font-size: 1.8rem;
-}
 
 @media only screen and (min-width: 1170px) {
-  header {
-    height: 300px;
-    line-height: 300px;
-  }
-  header h1 {
-    font-size: 2.4rem;
-  }
+
 }
 
 .cd-timeline {
-  overflow: hidden;
+  overflow: visible;
   margin: 2em auto;
 }
 
@@ -1086,3 +990,52 @@ header h1 {
             transform: translateX(0);
   }
 }
+
+@media only screen and (min-width: 600px) {
+  
+    menu.active {
+      display: none;
+    }
+    .menu ul {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      top: 0;
+      height: min-content;
+      justify-content: space-around;
+      background: transparent;
+    }
+    
+    a.toggle-nav {
+      display: none;
+    }
+  
+    /* home page */
+  
+    .learn-more {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 300px;
+      grid-gap: 2em;
+      margin-top: 2em;
+      text-align: center;
+     }
+
+     .learn-more h2 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      padding-bottom: 2em;
+      padding-top: 2em;
+    }
+    
+    .learn-more p {
+      line-height: 2rem;
+      padding-top: 2em;
+    }
+    
+    .learn-more svg {
+      transform: scale(2);
+      color: #bac4cb;
+      display: inline-block;
+    }
+   }
