@@ -59,13 +59,11 @@ html {
 body {
   margin: auto;
   width: 100%;
-  /* background-image:  linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url("../images/First_Web_Server.jpg"); */
+  background: linear-gradient(rgba(173, 54, 167, 0.5), rgba(255, 178, 0, 0.25));
   font-family: 'Lato', 'Arial', 'Sans serif';
   position: relative;
-  background: #feffff;
-  color: #7f8c97;
+  color: #feffff;
   font-size: 1.6rem;
-  /* background: linear-gradient(90deg, lightblue 0%,#cf60db 60%); */
 }
 /* main styles */
 main {
@@ -83,7 +81,7 @@ header {
   /* background: #eaffff; */
 }
 nav.menu {
-height: 15vh;
+height: 10vh;
 }
 
 .menu ul {
@@ -95,7 +93,7 @@ height: 15vh;
 	position: fixed;
 	width: 100%;
 	left: 0;
-	top: 15vh;
+	top: 10vh;
 	height:min-content;
 	display: flex;
 	flex-direction: column;
@@ -113,7 +111,7 @@ flex: 0 0 calc(100% / 4);
 .menu a {
 	text-align: center;
 	width: 100%;
-	height: 100%;
+	height: 10vh;
 	text-decoration: none;
   display: block;
   color: #6b00fe;
@@ -136,16 +134,39 @@ flex: 0 0 calc(100% / 4);
  /* banner image */
 
  .banner {
-  background: #303e49;
   width: 100%;
-  height: 200px;
+  height: 70vh;
+  background-image: url("../images/web-world-characters-copy.svg"); 
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
+  background-position-y: center;
  }
- 
 
+/* footer styles */
+
+footer {
+  width: 100%;
+  height: 20vh;
+  background: #291544;
+  margin-top: 2em;
+}
 /* home page */
+.page-title {
+  background: white;
+  color: #6b00fe;
+  padding: 1em;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+.page-title span {
+color: #291544;
+font-size: 2.5rem;
+display: block;
+text-align: center;
+}
 
 .learn-more {
  display: grid;
@@ -184,6 +205,34 @@ flex: 0 0 calc(100% / 4);
   display: none;
 }
 
+
+/* Travel guide page */
+
+.tips-tricks {
+  position: absolute;
+  top: 24%;
+  left: 60%;
+  background: #bf93ff;
+  height: min-content;
+  padding: 1em;
+  font-size: 1.25rem;
+  border-radius: 2px;
+}
+
+.tips-tricks h1 {
+  padding-bottom: 1em;
+  color: #6b00fe;
+  font-size: 1.5rem;
+}
+
+.internet-user-portrait {
+  position: relative;
+  padding-top: 15vh;
+}
+
+.connection {
+  border-bottom: 3px solid #ffb200;
+}
 /* History page */
 
 .history-container {
@@ -192,10 +241,9 @@ flex: 0 0 calc(100% / 4);
 }
 
 .brief-history {
-  width: 50%;
   padding: 1em;
-  width: 50%;
   background: rgba(255, 153, 0, 0.9);
+  width: 60vw;
 }
 
 .info-history {
@@ -252,7 +300,12 @@ border-bottom: .5em solid yellow;
 
 
 /* culture style page */
-
+.meet-the-folks {
+  display: flex;
+  padding-top: 15vh;
+  margin-bottom: 2em;
+  background: white;
+}
 table { 
 	width: 70vw; 
   border-collapse: collapse; 
@@ -457,31 +510,50 @@ input[type=radio]:checked + label::after {
 /* Travel Guide Page Styles */
 
 .container {
-  background: rgba(0,0,0,.8);
+  display: grid;
   color: #fff;
   font-size: 1em;
   line-height: 2.5em;
+  margin: 2em 0;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
 }
 
 .container > * {
+  background: #feffff;
+  border-radius: 2px;
   text-align: center;
-  padding: 1em;
+  color: #291544;
+}
+
+.container span {
+  margin-right: .5em;
+  background: #e1ecee;
+  border-radius: 2px;
+  padding: .5em;
+  color: #291544;
 }
 
 .container h1 {
-  font-size: 2.5em;
-  font-size: 2em;
-  letter-spacing: 2px;
-  padding: 1em;
+    font-size: 2.5em;
+    font-size: 1.25em;
+    height: 100px;
+    letter-spacing: 2px;
+    padding: 1em;
+    background: #ff5f56;
+    color: #feffff;
 }
 
 .container h3 {
   font-weight: bold;
   padding-bottom: 1em;
+  margin: 1em 0;
 }
 
-.container i {
- font-size: 3em;
+.container svg {
+  font-size: 3em;
+  color: #291544;
+  padding: .25em;
 }
 
 .tricks {
@@ -498,33 +570,21 @@ font-size: 3rem;
 }
 /* Supplies section Styles */
 
-.supplies {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 0 40%;
-  padding-bottom: 5em;
-  border-bottom: .5em solid blue;
-}
+
 /* Browser section Styles */
-.browser {
-  flex: 0 0 60%;
-  margin-bottom: 2em;
-}
 
 .browser-examples {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 1em;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-gap: 1em;
+margin: 1em 30%;
 }
 
-.travel-style {
-  flex: 0 0 100%;
-  padding: 0;
-  width: 100%;
-  border-top: .5em solid blue;
-  padding-top: 2em;
+.browser-examples svg {
+  background: #ffb200;
+  border-radius: 200px;
+  color: #291544;
 }
 
 .device {
@@ -539,22 +599,23 @@ font-size: 3rem;
 }
 
 ul.style {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 1.5rem;
 }
 
-.future-you {
-  /* background-color: orange; */
-  background: url("../images/this-could-be-you.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+.style li {
+  margin: 1em 0;
+}
+
+
+.style p {
+  background: #6b00fe;
+  border-radius: 2px;
+  width: 50%;
+  margin: 0 auto;
+  color: #feffff;
 }
 
 .tips {
@@ -566,7 +627,10 @@ ul.style {
   position: relative;
 }
 ul.style img {
-  width: 10em;
+  width: 8em;
+  padding: .5em;
+  background: #ffb200;
+  border-radius: 200px;
 }
 
 /* image slide */
@@ -992,7 +1056,9 @@ Resource style
 }
 
 @media only screen and (min-width: 600px) {
-  
+  nav.menu {
+    height: 10vh;
+  }
     menu.active {
       display: none;
     }
@@ -1035,7 +1101,33 @@ Resource style
     
     .learn-more svg {
       transform: scale(2);
-      color: #bac4cb;
+      color: #ff5f56;
       display: inline-block;
     }
+
+    /* Travel Guide Page */
+    .internet-user-portrait {
+      padding-top: 10vh;
+    }
+
+    .tips-tricks {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+
+    .tips-tricks h1 {
+      font-size: 2.5rem;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1em;
+      padding-top: 1em;
+      color: #fff;
+      font-size: 1em;
+      line-height: 2.5em;
+    }
+
+
    }
