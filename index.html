@@ -1,76 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web-world</title>
   <link href="styles/main.css" rel="stylesheet">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|VT323" rel="stylesheet">
 </head>
-<!-- body -->
+
 <body>
-<!-- header -->
-<header>
-  <nav class="menu">
-    <ul>
-      <li><a href="index.html">About</a></li>
-      <li><a href="history.html" class="nav-link">History</a></li>
-      <li><a href="culture.html" class="nav-link">Culture</a></li>
-      <li><a  href="travel-guide.html" class="nav-link">Travel Guide</a>
-      </li>
-    </ul> <!--.active -->
-    <a class="toggle-nav" href="#"><i class="fas fa-bars"></i></a>
-  </nav> <!--.menu -->
-</header>
+  <div class="header">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+    <div class="menu-container">
+      <span class="bar-menu" onclick="openNav()">&#9776;</span>
+    </div>
+  </div>
 
-<!-- banner section -->
-<section class="banner">
-</section>
-  
-  <!-- main content -->
- <main class="home-page">
-    <h1 class="page-title">console.log("<span>Hello Web World!</span>");</h1>
-  <!-- learn-more section -->
-  <section class="learn-more">
-  <!-- start article -->
-    <article class="start">
-      <a href="history.html">
-        <div class="info">
-            <h2>How it all started<span class="period">.</span></h2>
-            <div><i class="fa fa-power-off" aria-hidden="true"></i></div>
-            <p>Learn more about the founders and technological advancements that have shaped web world.</p>
-        </div>
-     </a>
-    </article>
-  <!-- people article -->
-    <article class="people">
-      <a href="culture.html">
-        <div class="info">
-            <h2>People<span class="period">.</span></h2>
-            <div><i class="fa fa-users" aria-hidden="true"></i></div>
-            <p>Learn more about the characters who give web world it's distinct syntax.</p>
-        </div>
-        </a>
-    </article>
-  <!-- explore article -->
-    <article class="explore">
-      <a href="travel-guide.html">
-      <div class="info">
-          <h2>Connect<span class="period">.</span></h2>
-          <div><i class="fa fa-search" aria-hidden="true"></i></div>
-          <p>learn more about traveling in Web world. How to get here. What to do and tips from frequent travelers</p>
-      </div>  
-      </a>
-    </article>
-  </section> <!-- .learn-more -->
- </main>
- <footer>
 
- </footer>
- <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
- crossorigin="anonymous"></script>
- <script src="./scripts/imageslide.js"></script>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Community</a>
+      <a href="#">Travel Guide</a>
+      <a href="#">Contact</a>
+      <img class="desk" src="images/table-perspective.png" alt="sitting at desk">
+    </div>
+  </div>
+  <div class="parallax__container">
+    <h1 class="title parallax__image" data-speed="8"
+      style="position: absolute;z-index:10;font-size: 16px; width: 80%; max-width: 720px; color: white;">Anyone
+      who has
+      lost
+      track of time
+      when
+      using a
+      computer knows the
+      propensity to dream,
+      the urge to make
+      dreams
+      come true and
+      the tendency to miss lunch. <span style="display: block; color: #0CF5BD">Tim Berners-Lee</span>
+      <a href="#main" class="arrow">Discover more &raquo;</a>
+    </h1>
+
+    <img class="" data-speed="1" src="img/front-mountain.svg"
+      style="width: 500px;position:absolute; bottom: 0; right: 0;" alt="">
+
+    <img class="parallax__image" data-speed="1" src="img/Ellipse 5.svg" style="width: 50px;" alt="">
+
+    <img class="parallax__image star" data-speed="3" src="img/logo.svg" alt="">
+
+    <img class="parallax__image" data-speed="5" src="img/cloud-sm.svg" alt=""
+      style="opacity:0.5; width: 100%;position: absolute; filter:invert(80%);">
+
+    <img class="parallax__image" data-speed="6" src="img/moon-small.svg"
+      style="width: 50px; position: absolute; top: 60%; left:25%;" alt="">
+
+    <img class="parallax__image move" data-speed="7" src="img/cloud-left.svg"
+      style="width: 100%; position: absolute; top: 50px; right:25px; opacity:0.5;" alt="">
+
+    <img class="parallax__image" id="moon" data-speed="8" src="img/moon.svg" style="width: 250px;   filter: blur(8px); position: absolute; top: 50%; bottom: 50%;
+		-webkit-filter: blur(8px);" alt="">
+
+    <img id="star" class="parallax__image" data-speed="1" src="img/Ellipse 5.svg" style="    width: 25px;
+    transform: translateY(0px);
+    position: absolute;
+    top: 20%;
+    left: 20%;" alt="">
+  </div>
+
+
+  <main id="main">
+    <h1 class="welcome">Welcome to Web World</h1>
+    <section class="card">
+      <article class="card-left">
+        <h3>How it started</h3>
+        <p>Learn more about the founders
+          and technological advancements
+          that have shaped web world.</p>
+        <a href="" class="btn cta bg">learn more</a>
+      </article>
+      <article class="card-right">
+        <img class="card-image" src="images/1x/Asset 12.png" alt="computer networks">
+      </article>
+    </section>
+
+    <section class="card flip">
+      <article class="card-left">
+        <h3>Our Community</h3>
+        <p>Learn more about the characters who give web world it's distinct syntax.</p>
+        <a href="" class="btn cta bg">learn more</a>
+      </article>
+      <article class="card-right">
+        <img class="card-image" style="max-width: 300px;" src="Asset_13_A2_Rectangle_10_pattern.png"
+          alt="computer networks">
+      </article>
+    </section>
+
+
+    <section class="card">
+      <article class="card-left">
+        <h3>Connect With Us</h3>
+        <p>learn more about traveling in Web world. How to get here. What to do and tips from frequent travelers.</p>
+        <a href="" class="btn cta bg">learn more</a>
+      </article>
+      <article class="card-right">
+        <img class="card-image" style="width: 100%; max-width: 160px;" src="Asset_10_A0_Rectangle_5_pattern.png"
+          alt="computer networks">
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <nav class="stroke">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Travel Guide</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function () {
+      myFunction()
+    };
+
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+  <script>
+    const parallaxImages = document.querySelectorAll(".parallax__image");
+    // document.querySelector(".parallax__noscript--image").style.display = "none";
+
+    window.addEventListener("scroll", () => {
+      parallaxImages.forEach((image, index) => {
+        image.style.transform =
+          "translateY(-" + window.scrollY * (index + 1) / 10 + "px)";
+      });
+    });
+  </script>
 </body>
+
 </html>
