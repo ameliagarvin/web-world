@@ -693,7 +693,7 @@ nav.fill ul li a:hover:after {
 .time {
   margin: 0;
   display: grid;
-  grid-template-columns: 30% 60%;
+  grid-template-columns: 30% 70%;
   font-family: system-ui, sans-serif;
 
   /* this breaks position sticky in Firefox */
@@ -714,7 +714,8 @@ nav.fill ul li a:hover:after {
 
 .timeline-nav {
   white-space: nowrap;
-  background: #37474F;
+
+  text-align: center;
 }
 
 .timeline-nav ul {
@@ -733,24 +734,120 @@ nav.fill ul li a:hover:after {
 
 .timeline-nav ul li a {
   display: block;
-  padding: 0.5rem 1rem;
-  color: white;
+  padding: 1rem;
+  color: #333;
   text-decoration: none;
 }
 
 .timeline-nav ul li a.current {
   background: white;
   color: #0CF5BD;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+.timeline-section {
+  margin: 0 0 2rem 0;
+  padding: 2em 0;
+  -webkit-box-shadow: 6px 10px 5px -4px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 6px 10px 5px -4px rgba(0, 0, 0, 0.07);
+  box-shadow: 6px 10px 5px -4px rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 40%;
+}
+
+.right h2 {
+  font-weight: bold;
+  font-size: 1.15rem;
+  padding-bottom: 1em;
+}
+
+.timeline-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 1em;
+  margin-bottom: auto;
 }
 
 main {
-  padding-bottom: 40rem;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ASF_0013.jpg/320px-ASF_0013.jpg');
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.timeline-section {
-  padding: 2rem;
-  margin: 0 0 2rem 0;
-  height: 100vh;
+#section-1 img {
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: white;
+}
+
+.fade {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 footer {
