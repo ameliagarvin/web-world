@@ -137,6 +137,8 @@ table {
 /* End of CSS reset */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
 }
 
 *,
@@ -436,6 +438,7 @@ html {
   z-index: -1;
 }
 
+/* 
 a.btn {
   position: relative;
 }
@@ -454,20 +457,20 @@ a:active.btn:before {
 a:active.btn:after {
   top: 1px;
   left: 1px;
-}
+} */
 
 
 
 /* NAVIGATION */
-nav {
+/* nav {
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px 0;
   display: flex;
   justify-content: flex-end;
-}
+} */
 
-nav ul {
+/* nav ul {
   list-style: none;
   text-align: center;
   margin: 0;
@@ -478,9 +481,9 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-}
+} */
 
-nav ul li a {
+/* nav ul li a {
   display: block;
   padding: 15px;
   text-decoration: none;
@@ -494,20 +497,20 @@ nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
   transition: all .5s;
-}
+} */
 
-nav ul li a:hover {
+/* nav ul li a:hover {
   color: #0CF5BD;
-}
+} */
 
 
 /* stroke */
-nav.stroke ul li a,
+/* nav.stroke ul li a,
 nav.fill ul li a {
   position: relative;
-}
+} */
 
-nav.stroke ul li a:after,
+/* nav.stroke ul li a:after,
 nav.fill ul li a:after {
   position: absolute;
   bottom: 0;
@@ -547,7 +550,7 @@ nav.fill ul li a:hover:after {
   -webkit-animation: fill 1s forwards;
   -moz-animation: fill 1s forwards;
   opacity: 1;
-}
+} */
 
 /* cards */
 .card {
@@ -642,9 +645,9 @@ nav.fill ul li a:hover:after {
   background-color: #350225;
 }
 
-nav ul {
+/* nav ul {
   flex-direction: row;
-}
+} */
 
 .star {
   position: absolute;
@@ -687,3 +690,71 @@ nav ul {
 }
 
 /* history page */
+.time {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  font-family: system-ui, sans-serif;
+
+  /* this breaks position sticky in Firefox */
+  /* overflow-x: hidden; */
+}
+
+#history {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#history h1 {
+  font-size: 1.5rem;
+}
+
+.timeline-nav {
+  white-space: nowrap;
+  background: #37474F;
+}
+
+.timeline-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+  .timeline-nav ul {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.timeline-nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.timeline-nav ul li a.current {
+  background: white;
+  color: #0CF5BD;
+}
+
+main {
+  padding-bottom: 40rem;
+}
+
+.timeline-section {
+  padding: 2rem;
+  margin: 0 0 2rem 0;
+  height: 100vh;
+}
+
+footer {
+  grid-column: 1 / 3;
+  background: #607D8B;
+  padding: 5rem 1rem;
+}
